@@ -28,7 +28,7 @@ app.use(passport.session());
 app.use("/auth", authRoute);
 app.use("/dashboard", dashboardRoute);
 
-//create home route
+//create home routes
 app.get("/", (req, res) => {
   res.render("home", { user: req.user });
 });
@@ -36,5 +36,5 @@ app.get("/", (req, res) => {
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
-  console.log(`Server connected to port ${port}`);
+  console.log(`Listening connected to port ${port}`);
 });
